@@ -1,0 +1,42 @@
+{
+  "name": "@bitchat/nostr",
+  "version": "0.1.0",
+  "description": "BitChat-over-Nostr transport — NIP-17 gift wrap, relay client, embedded packet helpers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/*.test.js",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["bitchat", "nostr", "nip17", "relay", "p2p", "mesh"],
+  "license": "Unlicense",
+  "repository": { "type": "git", "url": "https://github.com/bitchat-sdk/nostr-js.git" },
+  "homepage": "https://github.com/bitchat-sdk/nostr-js#readme",
+  "bugs": { "url": "https://github.com/bitchat-sdk/nostr-js/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=18.0.0" },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@bitchat/protocol-core": "^0.1.0",
+    "ws": "^8.17.0"
+  },
+  "peerDependencies": {
+    "@noble/curves": "^1.4.0",
+    "@noble/hashes": "^1.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@noble/curves": { "optional": true },
+    "@noble/hashes": { "optional": true }
+  }
+}
