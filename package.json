@@ -10,21 +10,42 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/*.test.js",
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": ["bitchat", "nostr", "nip17", "relay", "p2p", "mesh"],
+  "keywords": [
+    "bitchat",
+    "nostr",
+    "nip17",
+    "relay",
+    "p2p",
+    "mesh"
+  ],
   "license": "Unlicense",
-  "repository": { "type": "git", "url": "https://github.com/bitchat-sdk/nostr-js.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitchat-sdk/nostr-js.git"
+  },
   "homepage": "https://github.com/bitchat-sdk/nostr-js#readme",
-  "bugs": { "url": "https://github.com/bitchat-sdk/nostr-js/issues" },
-  "publishConfig": { "access": "public" },
-  "engines": { "node": ">=18.0.0" },
+  "bugs": {
+    "url": "https://github.com/bitchat-sdk/nostr-js/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
+    "@types/ws": "^8.18.1",
     "typescript": "^5.4.0"
   },
   "dependencies": {
@@ -36,7 +57,11 @@
     "@noble/hashes": "^1.4.0"
   },
   "peerDependenciesMeta": {
-    "@noble/curves": { "optional": true },
-    "@noble/hashes": { "optional": true }
+    "@noble/curves": {
+      "optional": true
+    },
+    "@noble/hashes": {
+      "optional": true
+    }
   }
 }

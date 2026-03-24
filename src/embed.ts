@@ -17,7 +17,6 @@ import { bytesToHex, decode as decodePacket, type BitchatPacket } from '@bitchat
 import type { NostrEvent, EmbeddedBitChatPayload, NostrRumor } from './types.js';
 import { NostrKind } from './types.js';
 
-const B64_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 /**
  * Encode a BitChat binary packet to base64 for embedding in a Nostr event content field.
@@ -39,7 +38,7 @@ export async function decodePacketFromBase64(
   } catch {
     return null;
   }
-  return decodePacket(raw);
+  return await decodePacket(raw);
 }
 
 /**
@@ -105,7 +104,7 @@ export async function extractPacketFromEvent(
   } catch {
     return null;
   }
-  const decoded = decodePacket(raw);
+  const decoded = await decodePacket(raw);
   if (!decoded) return null;
 
   let senderIDHex: string | undefined;
