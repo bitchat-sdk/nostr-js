@@ -1,4 +1,4 @@
-# Changelog — @bitchat/nostr
+# Changelog — @bitchat-sdk/nostr
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 

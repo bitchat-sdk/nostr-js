@@ -1,8 +1,8 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { encodePacketToBase64, decodePacketFromBase64, buildDMRumor } from '../embed.js';
-import { encode as encodePacket, hexToBytes } from '@bitchat/protocol-core';
-import { MessageType } from '@bitchat/protocol-core';
+import { encode as encodePacket, hexToBytes } from '@bitchat-sdk/protocol-core';
+import { MessageType } from '@bitchat-sdk/protocol-core';
 
 async function makeTestPacket(): Promise<Uint8Array> {
   return encodePacket({

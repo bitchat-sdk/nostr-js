@@ -1,5 +1,5 @@
 {
-  "name": "@bitchat/nostr",
+  "name": "@bitchat-sdk/nostr",
   "version": "0.1.0",
   "description": "BitChat-over-Nostr transport — NIP-17 gift wrap, relay client, embedded packet helpers",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "typescript": "^5.4.0"
   },
   "dependencies": {
-    "@bitchat/protocol-core": "^0.1.0",
+    "@bitchat-sdk/protocol-core": "^0.1.0",
     "ws": "^8.17.0"
   },
   "peerDependencies": {

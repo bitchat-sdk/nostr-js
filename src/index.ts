@@ -1,11 +1,11 @@
 /**
- * @bitchat/nostr
+ * @bitchat-sdk/nostr
  *
  * BitChat-over-Nostr transport for Node.js.
  * Provides NIP-17 gift wrap, relay client, and BitChat packet embedding helpers.
  *
  * ```ts
- * import { RelayClient, buildDMRumor, wrapAndSend, extractPacketFromEvent } from '@bitchat/nostr';
+ * import { RelayClient, buildDMRumor, wrapAndSend, extractPacketFromEvent } from '@bitchat-sdk/nostr';
  * ```
  */
 

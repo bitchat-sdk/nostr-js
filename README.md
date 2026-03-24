@@ -1,4 +1,4 @@
-# @bitchat/nostr
+# @bitchat-sdk/nostr
 
 BitChat-over-Nostr transport for Node.js.
 
@@ -9,7 +9,7 @@ for embedding BitChat binary packets inside Nostr events.
 ## Installation
 
 ```bash
-npm install @bitchat/nostr @bitchat/protocol-core
+npm install @bitchat-sdk/nostr @bitchat-sdk/protocol-core
 # NIP-17 encryption requires a secp256k1 library (optional):
 npm install @noble/curves @noble/hashes
 ```
@@ -19,8 +19,8 @@ npm install @noble/curves @noble/hashes
 ### Listen for BitChat packets via Nostr relay
 
 ```ts
-import { RelayClient, extractPacketFromEvent } from '@bitchat/nostr';
-import { NostrKind } from '@bitchat/nostr';
+import { RelayClient, extractPacketFromEvent } from '@bitchat-sdk/nostr';
+import { NostrKind } from '@bitchat-sdk/nostr';
 
 const relay = new RelayClient({ url: 'wss://relay.example.com' });
 await relay.connect();
@@ -37,9 +37,9 @@ relay.subscribe('bitchat-dm', [{ kinds: [NostrKind.GiftWrap] }], async (event) =
 ### Send a BitChat packet via NIP-17
 
 ```ts
-import { encode } from '@bitchat/protocol-core';
-import { buildDMRumor, wrapAndSend } from '@bitchat/nostr';
-import type { CryptoProvider } from '@bitchat/nostr';
+import { encode } from '@bitchat-sdk/protocol-core';
+import { buildDMRumor, wrapAndSend } from '@bitchat-sdk/nostr';
+import type { CryptoProvider } from '@bitchat-sdk/nostr';
 
 // 1. Encode your BitChat packet
 const wire = await encode(myPacket, { padding: false });

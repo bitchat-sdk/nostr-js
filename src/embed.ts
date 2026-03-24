@@ -13,7 +13,7 @@
  *   - The `t` tag may carry a topic/channel hash.
  */
 
-import { bytesToHex, decode as decodePacket, type BitchatPacket } from '@bitchat/protocol-core';
+import { bytesToHex, decode as decodePacket, type BitchatPacket } from '@bitchat-sdk/protocol-core';
 import type { NostrEvent, EmbeddedBitChatPayload, NostrRumor } from './types.js';
 import { NostrKind } from './types.js';
 
