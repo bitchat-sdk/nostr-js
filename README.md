@@ -1,5 +1,8 @@
 # @bitchat-sdk/nostr
 
+[![npm](https://img.shields.io/npm/v/@bitchat-sdk/nostr)](https://www.npmjs.com/package/@bitchat-sdk/nostr)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://unlicense.org)
+
 BitChat-over-Nostr transport for Node.js.
 
 Implements the relay transport layer used in the BitChat mesh app:
