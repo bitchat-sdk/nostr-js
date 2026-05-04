@@ -1,13 +1,14 @@
 {
   "name": "@bitchat-sdk/nostr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BitChat-over-Nostr transport — NIP-17 gift wrap, relay client, embedded packet helpers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -50,7 +51,7 @@
     "typescript": "^5.4.0"
   },
   "dependencies": {
-    "@bitchat-sdk/protocol-core": "^0.1.0",
+    "@bitchat-sdk/protocol-core": "^0.1.2",
     "ws": "^8.17.0"
   },
   "peerDependencies": {

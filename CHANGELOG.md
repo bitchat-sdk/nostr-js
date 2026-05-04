@@ -2,6 +2,16 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.1] — 2026-05-05
+
+### Fixed
+- `package.json` `exports` field was missing the `"import"` condition, causing
+  `ERR_PACKAGE_PATH_NOT_EXPORTED` for any ESM consumer. Added the missing condition
+  pointing at the same CJS bundle. Same fix as `@bitchat-sdk/protocol-core` 0.1.2.
+
+### Changed
+- Bumped `@bitchat-sdk/protocol-core` peer/runtime dep to `^0.1.2`.
+
 ## [0.1.0] — 2026-03-22
 
 Initial GA release.
@@ -31,6 +41,7 @@ Initial GA release.
 ### Protocol Compatibility
 Compatible with NIP-01, NIP-17. Wire events are interoperable with any standard Nostr relay.
 
+[0.1.1]: https://github.com/bitchat-sdk/nostr-js/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/bitchat-sdk/nostr-js/releases/tag/v0.1.0
 
-[Unreleased]: https://github.com/bitchat-sdk/nostr-js/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/bitchat-sdk/nostr-js/compare/v0.1.1...HEAD
